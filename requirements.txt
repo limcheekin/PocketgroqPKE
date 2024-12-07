@@ -1,0 +1,9 @@
+pocketgroq>=0.5.5
+rdflib>=6.0.0
+python-dotenv>=0.19.1
+groq>=0.8.0
+pytest>=7.3.1
+pytest-asyncio>=0.21.0
+markdown2>=2.5.0
+PyPDF2>=3.0.0
+graphviz>=0.20.1

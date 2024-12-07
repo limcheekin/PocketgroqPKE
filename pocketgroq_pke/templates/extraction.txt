@@ -1,0 +1,23 @@
+Acting as an expert in information extraction with a special background in procedures, analyze the following text and extract:
+1. A list of steps in sequential order
+2. For each step identify:
+   - Action(s): verb or phrasal verb representing action(s) to be performed
+   - Direct object(s): noun or pronoun being acted upon
+   - Equipment: items needed to perform the action (including implied items)
+   - Time information: any temporal details about performing the action
+
+Provide output in this format:
+title: [procedure title]
+steps:
+1. text: [step text]
+   actions: [comma-separated list of actions]
+   direct_objects: [comma-separated list of objects]
+   equipment: [comma-separated list of equipment]
+   time: [temporal info if any, null if none]
+2. [next step...]
+
+Include implied equipment that would be needed even if not explicitly mentioned in the text.
+Each step may include multiple actions if needed.
+The direct object of an action cannot be considered equipment.
+
+Text to analyze:
