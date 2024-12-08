@@ -1,0 +1,137 @@
+
+        @prefix p-plan: <http://purl.org/net/p-plan#> .
+        @prefix khub-proc: <https://knowledge.c-innovationhub.com/k-hub/procedure#> .
+        @prefix frapo: <http://purl.org/cerif/frapo/> .
+        @prefix time: <http://www.w3.org/2006/time#> .
+        @prefix po: <http://example.org/procedural#> .
+        @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+        
+        
+        :our_vision_is_therefore_to_extract_procedural a p-plan:Plan ;
+            rdfs:label "Our vision is therefore to extract procedural" .
+        
+            :our_vision_is_therefore_to_extract_procedural_step1 a p-plan:Step ;
+                rdfs:label "We reuse existing ontologies when applicable, namely: P-Plan [14] and K-Hub [42], that address plans and related concepts, FRAPO, one of the SPAR ontologies3, and the Time Ontology4, while creating a few new classes and properties when needed (po:)." ;
+                po:hasStep :our_vision_is_therefore_to_extract_procedural ;
+
+                po:hasAction :our_vision_is_therefore_to_extract_procedural_step1_action1 ;
+                po:hasDirectObjectOfAction :our_vision_is_therefore_to_extract_procedural_step1_obj1 ;
+                
+                po:hasAction :our_vision_is_therefore_to_extract_procedural_step1_action2 ;
+                po:hasDirectObjectOfAction :our_vision_is_therefore_to_extract_procedural_step1_obj2 ;
+                    frapo:usesEquipment :our_vision_is_therefore_to_extract_procedural_step1_equip1 ;
+    .
+
+            :our_vision_is_therefore_to_extract_procedural_step2 a p-plan:Step ;
+                rdfs:label "Specifically, as depicted in Figure 1, a procedure is represented by the class p-plan:Plan and is linked to its p-plan:Steps (po:hasStep), which are sequentially ordered (property p-plan:precededBy and its inverse khub-proc:nextStep)." ;
+                po:hasStep :our_vision_is_therefore_to_extract_procedural ;
+
+                po:hasAction :our_vision_is_therefore_to_extract_procedural_step2_action1 ;
+                po:hasDirectObjectOfAction :our_vision_is_therefore_to_extract_procedural_step2_obj1 ;
+                
+                po:hasAction :our_vision_is_therefore_to_extract_procedural_step2_action2 ;
+                po:hasDirectObjectOfAction :our_vision_is_therefore_to_extract_procedural_step2_obj2 ;
+                    frapo:usesEquipment :our_vision_is_therefore_to_extract_procedural_step2_equip1 ;
+    p-plan:precededBy :our_vision_is_therefore_to_extract_procedural_step1 ;
+    .
+
+            :our_vision_is_therefore_to_extract_procedural_step3 a p-plan:Step ;
+                rdfs:label "Each step is then linked to its frapo:Equipment, if any, via the property frapo:usesEquipment, and with the action(s) to be performed while executing it (po:hasAction), along with the direct object of the action (po:hasDirectObjectOfAction)." ;
+                po:hasStep :our_vision_is_therefore_to_extract_procedural ;
+
+                po:hasAction :our_vision_is_therefore_to_extract_procedural_step3_action1 ;
+                po:hasDirectObjectOfAction :our_vision_is_therefore_to_extract_procedural_step3_obj1 ;
+                
+                po:hasAction :our_vision_is_therefore_to_extract_procedural_step3_action2 ;
+                po:hasDirectObjectOfAction :our_vision_is_therefore_to_extract_procedural_step3_obj2 ;
+                
+                po:hasAction :our_vision_is_therefore_to_extract_procedural_step3_action3 ;
+                po:hasDirectObjectOfAction :our_vision_is_therefore_to_extract_procedural_step3_obj3 ;
+                    frapo:usesEquipment :our_vision_is_therefore_to_extract_procedural_step3_equip1 ;
+    p-plan:precededBy :our_vision_is_therefore_to_extract_procedural_step2 ;
+    .
+
+            :our_vision_is_therefore_to_extract_procedural_step4 a p-plan:Step ;
+                rdfs:label "The information about the time needed for executing the step is represented by the class time:TemporalEntity." ;
+                po:hasStep :our_vision_is_therefore_to_extract_procedural ;
+
+                po:hasAction :our_vision_is_therefore_to_extract_procedural_step4_action1 ;
+                po:hasDirectObjectOfAction :our_vision_is_therefore_to_extract_procedural_step4_obj1 ;
+                    frapo:usesEquipment :our_vision_is_therefore_to_extract_procedural_step4_equip1 ;
+    p-plan:precededBy :our_vision_is_therefore_to_extract_procedural_step3 ;
+    .
+
+            :our_vision_is_therefore_to_extract_procedural_step5 a p-plan:Step ;
+                rdfs:label "Input procedures. For our experiments, we use as a reference dataset WikiHow, one of the largest online databases of PK, which includes how-to articles on multiple domains." ;
+                po:hasStep :our_vision_is_therefore_to_extract_procedural ;
+
+                po:hasAction :our_vision_is_therefore_to_extract_procedural_step5_action1 ;
+                po:hasDirectObjectOfAction :our_vision_is_therefore_to_extract_procedural_step5_obj1 ;
+                
+                po:hasAction :our_vision_is_therefore_to_extract_procedural_step5_action2 ;
+                po:hasDirectObjectOfAction :our_vision_is_therefore_to_extract_procedural_step5_obj2 ;
+                    frapo:usesEquipment :our_vision_is_therefore_to_extract_procedural_step5_equip1 ;
+    p-plan:precededBy :our_vision_is_therefore_to_extract_procedural_step4 ;
+    .
+
+            :our_vision_is_therefore_to_extract_procedural_step6 a p-plan:Step ;
+                rdfs:label "We reuse the JSON dataset built by [52], crawled from the WikiHow website5, and focus on atomic procedures, that do not include methods/parts as sub-procedures." ;
+                po:hasStep :our_vision_is_therefore_to_extract_procedural ;
+
+                po:hasAction :our_vision_is_therefore_to_extract_procedural_step6_action1 ;
+                po:hasDirectObjectOfAction :our_vision_is_therefore_to_extract_procedural_step6_obj1 ;
+                
+                po:hasAction :our_vision_is_therefore_to_extract_procedural_step6_action2 ;
+                po:hasDirectObjectOfAction :our_vision_is_therefore_to_extract_procedural_step6_obj2 ;
+                    frapo:usesEquipment :our_vision_is_therefore_to_extract_procedural_step6_equip1 ;
+    p-plan:precededBy :our_vision_is_therefore_to_extract_procedural_step5 ;
+    .
+
+            :our_vision_is_therefore_to_extract_procedural_step7 a p-plan:Step ;
+                rdfs:label "Out of each selected procedure, we build an unformatted text (also partially removing punctuation), by concatenating (i) procedure title, representing the overall goal, (ii) general procedure description, (iii) headline of each step, (iv) description of each step." ;
+                po:hasStep :our_vision_is_therefore_to_extract_procedural ;
+
+                po:hasAction :our_vision_is_therefore_to_extract_procedural_step7_action1 ;
+                po:hasDirectObjectOfAction :our_vision_is_therefore_to_extract_procedural_step7_obj1 ;
+                
+                po:hasAction :our_vision_is_therefore_to_extract_procedural_step7_action2 ;
+                po:hasDirectObjectOfAction :our_vision_is_therefore_to_extract_procedural_step7_obj2 ;
+                    frapo:usesEquipment :our_vision_is_therefore_to_extract_procedural_step7_equip1 ;
+    p-plan:precededBy :our_vision_is_therefore_to_extract_procedural_step6 ;
+    .
+
+            :our_vision_is_therefore_to_extract_procedural_step8 a p-plan:Step ;
+                rdfs:label "Thus, we also include in the text irrelevant sentences, which are supposed to be discarded during the extraction phase." ;
+                po:hasStep :our_vision_is_therefore_to_extract_procedural ;
+
+                po:hasAction :our_vision_is_therefore_to_extract_procedural_step8_action1 ;
+                po:hasDirectObjectOfAction :our_vision_is_therefore_to_extract_procedural_step8_obj1 ;
+                
+                po:hasAction :our_vision_is_therefore_to_extract_procedural_step8_action2 ;
+                po:hasDirectObjectOfAction :our_vision_is_therefore_to_extract_procedural_step8_obj2 ;
+                    frapo:usesEquipment :our_vision_is_therefore_to_extract_procedural_step8_equip1 ;
+    p-plan:precededBy :our_vision_is_therefore_to_extract_procedural_step7 ;
+    .
+
+            :our_vision_is_therefore_to_extract_procedural_step9 a p-plan:Step ;
+                rdfs:label "In total, we used four procedures randomly selected from WikiHow, one as working example for our prompt engineering phase, and three for our method replication and human assessment." ;
+                po:hasStep :our_vision_is_therefore_to_extract_procedural ;
+
+                po:hasAction :our_vision_is_therefore_to_extract_procedural_step9_action1 ;
+                po:hasDirectObjectOfAction :our_vision_is_therefore_to_extract_procedural_step9_obj1 ;
+                
+                po:hasAction :our_vision_is_therefore_to_extract_procedural_step9_action2 ;
+                po:hasDirectObjectOfAction :our_vision_is_therefore_to_extract_procedural_step9_obj2 ;
+                    frapo:usesEquipment :our_vision_is_therefore_to_extract_procedural_step9_equip1 ;
+    p-plan:precededBy :our_vision_is_therefore_to_extract_procedural_step8 ;
+    .
+
+            :our_vision_is_therefore_to_extract_procedural_step10 a p-plan:Step ;
+                rdfs:label "Such procedures are diverse with respect to both complexity and topic: how to clean a computer monitor (working example), how to fix a rubbing door, how to make honey glazed parsnips, and how to plant a bare root tree." ;
+                po:hasStep :our_vision_is_therefore_to_extract_procedural ;
+
+                po:hasAction :our_vision_is_therefore_to_extract_procedural_step10_action1 ;
+                po:hasDirectObjectOfAction :our_vision_is_therefore_to_extract_procedural_step10_obj1 ;
+                    frapo:usesEquipment :our_vision_is_therefore_to_extract_procedural_step10_equip1 ;
+    p-plan:precededBy :our_vision_is_therefore_to_extract_procedural_step9 ;
+    .
