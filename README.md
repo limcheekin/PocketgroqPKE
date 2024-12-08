@@ -1,6 +1,7 @@
 # PocketgroqPKE - Procedural Knowledge Extractor
 
 An extension for PocketGroq that extracts structured procedural knowledge from text and PDFs, generates RDF knowledge graphs, and creates visualizations.
+![MQIR-aEmRoK2xeDCJ1_I2w](https://github.com/user-attachments/assets/26849551-f594-43d7-94e9-7fa6f8264c30)
 
 ## Overview
 
